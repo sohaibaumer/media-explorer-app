@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { Link } from 'react-router-dom';
 
 const initialValues = {
   email: '',
@@ -13,10 +14,8 @@ const validationSchema = Yup.object({
 });
 
 function LoginForm(props) {
-
-
   const onSubmit = (values, { resetForm }) => {
-    console.log(values);
+    props.onLogin(values);
     resetForm();
   };
 
@@ -78,6 +77,12 @@ function LoginForm(props) {
           );
         }}
       </Formik>
+      <p className="text-center">
+        Don't have an account?{' '}
+        <Link to="?mode=Signup" className="font-bold underline">
+          Sign up
+        </Link>
+      </p>
     </div>
   );
 }
