@@ -1,11 +1,11 @@
 import React from 'react';
-import SignupForm from '../components/SignupForm';
+import Signup from '../components/Signup';
 import LoginForm from '../components/LoginForm';
 
 const HomePage = () => {
   return (
     <div>
-      <SignupForm />
+      <Signup />
       <br/>
       <LoginForm />
     </div>

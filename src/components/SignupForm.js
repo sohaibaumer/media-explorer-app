@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 import { FileUploader } from 'react-drag-drop-files';
 import CancelIcon from '@mui/icons-material/Cancel';
@@ -34,7 +35,7 @@ function SignupForm(props) {
     setLoading(true);
     setFile(file);
   };
-  
+
   const storeFile = useCallback(async () => {
     const reader = new FileReader();
     const blob = new Blob([file], { type: file.type });
@@ -50,7 +51,6 @@ function SignupForm(props) {
       storeFile();
     }
   }, [file, storeFile]);
-
 
   const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email format').required('Required!'),
@@ -87,7 +87,7 @@ function SignupForm(props) {
       twitter: values.twitter,
     };
 
-    console.log(user);
+    props.onAddUser(user);
     resetForm();
     setFile(null);
   };
@@ -497,6 +497,12 @@ function SignupForm(props) {
           );
         }}
       </Formik>
+      <p className="text-center">
+        Already have an account?{' '}
+        <Link to="?mode=Login" className="font-bold underline">
+          Log in
+        </Link>
+      </p>
     </div>
   );
 }
