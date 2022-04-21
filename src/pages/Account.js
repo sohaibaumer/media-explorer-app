@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import Logout from '../components/Logout';
 
 const AccountPage = () => {
   return (
-    <div>AccountPage</div>
-  )
-}
+      <Logout />
+  );
+};
 
 export default AccountPage;
