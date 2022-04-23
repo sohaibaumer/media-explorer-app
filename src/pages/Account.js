@@ -1,9 +1,13 @@
 import React from 'react';
-import Logout from '../components/Logout';
+import ExploreNavigation from '../components/ExploreNavigation';
 
 const AccountPage = () => {
   return (
-      <Logout />
+    <div className="relative w-screen">
+      <div className="fixed bottom-0 left-0 z-[1000] md:top-0 md:left-0 md:z-0">
+        <ExploreNavigation />
+      </div>
+    </div>
   );
 };
 
