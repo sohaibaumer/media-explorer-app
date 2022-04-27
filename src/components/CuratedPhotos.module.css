@@ -1,0 +1,134 @@
+ul.imagesList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(43px, 293px));
+  grid-template-rows: repeat(32, minmax(43px, 293px));
+  grid-gap: 2px;
+  min-width: 133px;
+  max-width: 893px;
+  margin: 32px auto 0px auto;
+  height: 900vw;
+  width: 98%;
+}
+
+ul.imagesList > li {
+  width: 100%;
+}
+
+ul.imagesList > li.double {
+  grid-row-end: span 2;
+}
+
+ul.imagesList > li > a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block
+}
+
+ul.imagesList > li > a > div {
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 4px;
+}
+
+ul.imagesList > li > a:hover > div {
+  z-index: 10;
+}
+
+ul.imagesList > li > a > div > div {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+
+ul.imagesList > li > a > div > div > svg {
+  width: 60%;
+  height: 60%;
+}
+
+ul.imagesList > li > a > div > div > svg > path {
+  width: 100%;
+  height: 100%;
+}
+
+ul.imagesList > li > a > div > div > span {
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+ul.imagesList > li > a > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3%;
+}
+
+.imageThumbnail {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 360px) {
+  ul.imagesList > li > a > div {
+    border-radius: 3%;
+  }
+}
+
+@media (min-width: 480px) {
+  ul.imagesList > li > a > div > div > svg {
+    width: 75%;
+    height: 75%;
+  }
+}
+
+@media (min-width: 640px) {
+  ul.imagesList > li > a > div {
+    flex-direction: row;
+    column-gap: 24px;
+  }
+  ul.imagesList > li > a > div > div > svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  ul.imagesList {
+    width: 80%;
+    height: 750vw;
+    grid-gap: 7px;
+  }
+}
+
+@media (min-width: 1024px) {
+  ul.imagesList {
+    width: 70%;
+    height: 650vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  ul.imagesList {
+    width: 75%;
+    height: 550vw;
+  }
+}
+
+@media (min-width: 1664px) {
+  ul.imagesList {
+    height: 450vw;
+  }
+}
