@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 import CuratedPhotos from '../components/CuratedPhotos';
+import Videos from '../components/Videos';
 import ExploreNavigation from '../components/ExploreNavigation';
 import { Modal, Card, CardMedia, IconButton } from '@mui/material';
 import CancelIcon from '@mui/icons-material/Cancel';
@@ -11,6 +12,7 @@ const AccountPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [openModal, setOpenModal] = useState(false);
   const [imageData, setImageData] = useState();
+  const [videoData, setVideoData] = useState();
   const navigate = useNavigate();
   const mode = searchParams.get('mode');
 
@@ -97,6 +99,39 @@ const AccountPage = () => {
     </Modal>
   );
 
+  const videoModal = (
+    <Modal
+      open={openModal}
+      onClose={closeModalHandler}
+      className="rounded-[1%] flex"
+      BackdropProps={{ style: { backgroundColor: 'rgb(0,0,0,0.9)' } }}
+    >
+      <div className="relative m-auto">
+        <IconButton
+          aria-label="close"
+          sx={{ position: 'absolute', right: '0', top: '0', zIndex: '200' }}
+          onClick={closeModalHandler}
+        >
+          <CancelIcon
+            sx={{
+              color: 'white',
+              '&:hover': {
+                color: 'rgb(255,255,255,0.7)',
+              },
+            }}
+          />
+        </IconButton>
+        <video
+          src={videoData && videoData.video_files[0].link}
+          type={videoData && videoData.video_files[0].file_type}
+          controls
+          autoPlay
+          className="m-auto max-w-[98vw] max-h-[80vh] md:max-w-[80vw] md:max-h-[80vh]"
+        />
+      </div>
+    </Modal>
+  );
+
   function openModalHandler() {
     setOpenModal(true);
   }
@@ -107,6 +142,10 @@ const AccountPage = () => {
 
   function getImageData(data) {
     setImageData(data);
+  }
+
+  function getVideoData(data) {
+    setVideoData(data);
   }
 
   function downloadImage(url, fileName) {
@@ -158,12 +197,23 @@ const AccountPage = () => {
         <ExploreNavigation />
       </div>
       {mode === 'Images' && imageData && imageModal}
-      <div className="flex flex-col items-center md:ml-[72px] xl:ml-[240px]">
+      {mode === 'Videos' && videoData && videoModal}
+      {mode === 'Images' && (
+        <div className="flex flex-col items-center md:ml-[72px] xl:ml-[240px]">
           <CuratedPhotos
             onClick={openModalHandler}
             onGetImageData={getImageData}
           />
         </div>
+      )}
+      {mode === 'Videos' && (
+        <div className="flex flex-col items-center md:ml-[72px] xl:ml-[240px]">
+          <Videos
+            onClick={openModalHandler}
+            onGetVideoData={getVideoData}
+          />
+        </div>
+      )}
     </div>
   );
 };
