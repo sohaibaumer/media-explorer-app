@@ -1,24 +1,48 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 import CuratedPhotos from '../components/CuratedPhotos';
-import Videos from '../components/Videos';
 import ExploreNavigation from '../components/ExploreNavigation';
+import Videos from '../components/Videos';
 import { Modal, Card, CardMedia, IconButton } from '@mui/material';
 import CancelIcon from '@mui/icons-material/Cancel';
 import DownloadIcon from '@mui/icons-material/Download';
+import ToggleSwitch from '../components/ToggleSwitch';
+import SearchIcon from '@mui/icons-material/Search';
+import Profile from '../components/Profile';
+import SearchLabel from '../components/SearchLabel';
+import PopularSearches from '../components/PopularSearches';
 
-const AccountPage = () => {
+function AccountPage() {
   const [loggedInUsers, setLoggedInUsers] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams();
   const [openModal, setOpenModal] = useState(false);
   const [imageData, setImageData] = useState();
   const [videoData, setVideoData] = useState();
-  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchInputRef = useRef();
+  const [searchInput, setSearchInput] = useState(null);
+  const [switchState, setSwitchState] = useState(false);
+
   const mode = searchParams.get('mode');
 
   useEffect(() => {
     setSearchParams({ mode: 'Images' });
   }, []);
+
+  const searchSubmitHandler = (event) => {
+    event.preventDefault();
+    setSearchInput(searchInputRef.current.value);
+    searchInputRef.current.value = '';
+  };
+
+  useEffect(() => {
+    if (mode !== 'Search') {
+      setSearchInput(null);
+    }
+  }, [mode]);
+
+  function switchHandler(checked) {
+    setSwitchState(checked);
+  }
 
   const imageModal = (
     <Modal
@@ -37,6 +61,7 @@ const AccountPage = () => {
         >
           <IconButton
             aria-label="close"
+            // disableRipple="true"
             sx={{ position: 'absolute', right: '0' }}
             onClick={closeModalHandler}
           >
@@ -132,6 +157,8 @@ const AccountPage = () => {
     </Modal>
   );
 
+  const navigate = useNavigate();
+
   function openModalHandler() {
     setOpenModal(true);
   }
@@ -196,13 +223,17 @@ const AccountPage = () => {
       <div className="fixed bottom-0 left-0 z-[1000] md:top-0 md:left-0 md:z-0">
         <ExploreNavigation />
       </div>
+
       {mode === 'Images' && imageData && imageModal}
       {mode === 'Videos' && videoData && videoModal}
+      {mode === 'Search' && !switchState && imageData && imageModal}
+      {mode === 'Search' && switchState && videoData && videoModal}
       {mode === 'Images' && (
         <div className="flex flex-col items-center md:ml-[72px] xl:ml-[240px]">
           <CuratedPhotos
             onClick={openModalHandler}
             onGetImageData={getImageData}
+            onSearchInput={!switchState && searchInput && searchInput}
           />
         </div>
       )}
@@ -211,11 +242,61 @@ const AccountPage = () => {
           <Videos
             onClick={openModalHandler}
             onGetVideoData={getVideoData}
+            onSearchInput={switchState && searchInput && searchInput}
           />
+        </div>
+      )}
+      {mode === 'Search' && (
+        <div
+          className={`flex flex-col items-center ${
+            !searchInput && 'h-screen justify-center'
+          } mx-2 md:ml-[72px] xl:ml-[240px]`}
+        >
+          {!searchInput && <SearchLabel />}
+          <div className=" h-[48px] w-[100%] rounded-lg border border-[#dfe1e5] xs:w-[80%] xs:rounded-3xl lg:w-[600px] my-4 sm:my-6 mx-auto hover:shadow-[0px_1px_6px_rgba(32,33,36,.28)] hover:border-[rgba(223,225,229,0)] ">
+            <form
+              className="flex w-full h-full pr-2 items-center "
+              onSubmit={searchSubmitHandler}
+            >
+              <IconButton type="submit" variant="contained">
+                <SearchIcon sx={{ color: '#262626' }} />
+              </IconButton>
+              <label htmlFor="search" />
+              <input
+                className="outline-none w-[60%] 2xs:w-[75%] sm:w-[80%]"
+                placeholder="Search"
+                id="search"
+                ref={searchInputRef}
+              />
+              <ToggleSwitch onGetSwitchState={switchHandler} />
+            </form>
+          </div>
+          {!searchInput && (
+            <PopularSearches searchTerm={(search) => setSearchInput(search)} />
+          )}
+          {!switchState && searchInput && (
+            <CuratedPhotos
+              onClick={openModalHandler}
+              onGetImageData={getImageData}
+              onSearchInput={!switchState && searchInput && searchInput}
+            />
+          )}
+          {switchState && searchInput && (
+            <Videos
+              onClick={openModalHandler}
+              onGetVideoData={getVideoData}
+              onSearchInput={switchState && searchInput && searchInput}
+            />
+          )}
+        </div>
+      )}
+      {mode === 'Profile' && (
+        <div className="h-screen mx-4 md:ml-[72px] md:mr-0 xl:ml-[240px] xl:mr-0">
+          <Profile />
         </div>
       )}
     </div>
   );
-};
+}
 
 export default AccountPage;
