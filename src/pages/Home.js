@@ -14,7 +14,7 @@ import food from '../images/food.png';
 const HomePage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [searchParams, setSearchParams] = useSearchParams();
-  
+
   const images = useMemo(
     () => [
       { src: landscapes, alt: 'landscapes' },
@@ -44,7 +44,7 @@ const HomePage = () => {
   }, [images]);
 
   return (
-    <div className="m-auto 2xs:m-auto flex justify-center items-center">
+    <div className="mx-auto my-auto 2xs:m-auto flex justify-center items-center basis-2">
       <div className="hidden relative h-[600px] w-[300px] my-2 md:block ">
         <img
           src={mobFrame}

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
@@ -36,21 +36,22 @@ function SignupForm(props) {
     setFile(file);
   };
 
-  const storeFile = useCallback(async () => {
-    const reader = new FileReader();
-    const blob = new Blob([file], { type: file.type });
-    reader.readAsDataURL(blob);
-    reader.addEventListener('load', () => {
-      setFileUrl(reader.result);
-    });
-  }, [file]);
-
   useEffect(() => {
     setLoading(false);
     if (file) {
       storeFile();
     }
-  }, [file, storeFile]);
+  }, [file]);
+
+  async function storeFile() {
+    const reader = await new FileReader();
+    const blob = new Blob([file], { type: file.type });
+    reader.readAsDataURL(blob);
+    reader.addEventListener('load', () => {
+      console.log(reader.result);
+      setFileUrl(reader.result);
+    });
+  }
 
   const validationSchema = Yup.object({
     email: Yup.string().email('Invalid email format').required('Required!'),

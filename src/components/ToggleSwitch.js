@@ -9,9 +9,9 @@ function ToggleSwitch(props) {
     setChecked(!checked);
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     props.onGetSwitchState(checked);
-  }, [checked])
+  }, [checked]);
 
   return (
     <div
@@ -24,7 +24,7 @@ function ToggleSwitch(props) {
         backgroundColor: '#b5b5b5',
         transition: 'background-color 0.2s ease',
         cursor: 'pointer',
-        marginLeft: 'auto'
+        marginLeft: 'auto',
       }}
       onClick={handleChange}
     >

@@ -9,7 +9,7 @@ const Protected = ({ Component }) => {
     if (!isLoggedIn) {
       navigate('/');
     }
-  }, [navigate]);
+  }, []);
   return (
     <div>
       <Component />

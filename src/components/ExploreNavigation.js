@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { NavLink, useSearchParams } from 'react-router-dom';
-import { Modal, Card, CardActions, IconButton } from '@mui/material';
 import Logout from './Logout';
+import {
+  Modal,
+  Card,
+  CardActions,
+  IconButton,
+} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import '../fonts/Billabong.ttf';
 
@@ -15,7 +20,7 @@ function ExploreNavigation(props) {
   }
   return (
     <>
-      <nav className="bg-white w-screen px-0 h-[64px] text-[#262626] border-t flex items-center justify-center xs:justify-between  md:items-start md:w-[72px] md:h-screen md:py-8 md:px-2 md:border-t-0 md:border-r md:flex-col md:justify-between xl:w-[240px]">
+      <nav className="w-screen px-0 h-[64px] text-[#262626] border-t flex items-center justify-center xs:justify-between  md:items-start md:w-[72px] md:h-screen md:py-8 md:px-2 md:border-t-0 md:border-r md:flex-col md:justify-between xl:w-[240px]">
         <div className="m-0 md:mx-auto px-0 xl:m-0 xl:px-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"

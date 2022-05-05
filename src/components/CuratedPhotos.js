@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addSnackbar } from '../store/index';
 import classes from './CuratedPhotos.module.css';
 import { IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
@@ -11,6 +13,7 @@ function CuratedPhotos({ onSearchInput, onClick, onGetImageData }) {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const dispatch = useDispatch();
   const [search, setSearch] = useState('');
   const [searchSubmission, setSearchSubmission] = useState('');
   const [modalData, setModalData] = useState('');
@@ -39,7 +42,7 @@ function CuratedPhotos({ onSearchInput, onClick, onGetImageData }) {
           setIsLoading(false);
         })
         .catch((error) => {
-          console.log(error);
+          dispatch(addSnackbar({ message: error.message, style: 'failure' }));
 
           setError(error.message);
           setIsLoading(false);
@@ -71,7 +74,8 @@ function CuratedPhotos({ onSearchInput, onClick, onGetImageData }) {
           setIsLoading(false);
         })
         .catch((error) => {
-          console.log(error);
+          dispatch(addSnackbar({ message: error.message, style: 'failure' }));
+
           setError(error.message);
           setIsLoading(false);
         });

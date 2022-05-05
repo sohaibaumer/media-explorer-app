@@ -1,12 +1,15 @@
 import { useNavigate } from 'react-router-dom';
+import { addSnackbar } from '../store';
+import { useDispatch } from 'react-redux';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Typography } from '@mui/material';
 
 function Logout(props) {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   function logoutHandler() {
     localStorage.removeItem('loggedInUser');
-    console.log('Logout Success! ');
+    dispatch(addSnackbar({ message: 'Logout Success! ', style: 'success' }));
     navigate('/', true);
   }
 

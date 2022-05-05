@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import { useNavigate, Link, useSearchParams } from 'react-router-dom';
 import CuratedPhotos from '../components/CuratedPhotos';
-import ExploreNavigation from '../components/ExploreNavigation';
 import Videos from '../components/Videos';
+import ExploreNavigation from '../components/ExploreNavigation';
 import { Modal, Card, CardMedia, IconButton } from '@mui/material';
 import CancelIcon from '@mui/icons-material/Cancel';
 import DownloadIcon from '@mui/icons-material/Download';

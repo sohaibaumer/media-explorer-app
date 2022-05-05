@@ -23,13 +23,13 @@ ul.imagesList > li > a {
   position: relative;
   width: 100%;
   height: 100%;
-  display: inline-block
+  display: inline-block;
 }
 
 ul.imagesList > li > a > div {
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: -10;
   width: 100%;
   height: 100%;

@@ -167,7 +167,7 @@ function Videos({ onClick, onGetVideoData, onSearchInput }) {
                   </span>
                 </div>
               </div>
-              <img src={updatedImageUrl} className="2xs:rounded-[3%]" />
+              <img src={updatedImageUrl} className="2xs:rounded-[3%]" alt='thumbnail'/>
             </Link>
           </li>
         );

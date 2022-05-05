@@ -8,8 +8,6 @@ const Profile = () => {
     setUserDetails(JSON.parse(localStorage.getItem('loggedInUser')));
   }, []);
 
-
-
   return (
     <section className="max-w-[1200px] flex flex-col mx-auto h-full">
       <header className="w-full pt-4 md:pt-16 text-center">
@@ -27,14 +25,14 @@ const Profile = () => {
         </div>
         <div className="flex justify-center md:w-1/3 md:px-0 md:py-8 lg:p-8 md:items-start lg:items-center">
           <img
-            src={userDetails ? `${userDetails.profilePicture}` : ''} alt='Profile Picture'
+            src={userDetails ? `${userDetails.profilePicture}` : ''}
+            alt="Profile"
             className="object-cover rounded-full w-[225px] h-[225px] lg:w-[250px] lg:h-[250px] "
           />
-
         </div>
         <div className="text-center md:text-left mx-auto px-0 py-8 md:w-1/3 md:p-8">
           <h3 className="text-xl pb-2 md:text-2xl md:pb-8">Details</h3>
-          <div className='flex flex-col items-baseline md:items-start'>
+          <div className="flex flex-col items-baseline md:items-start">
             <div className="pb-2 flex items-center md:pb-0 md:block ">
               <h6 className="font-bold leading-6 pr-2 md:pr-0 md:leading-8">
                 Age:
