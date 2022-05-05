@@ -178,7 +178,7 @@ function Videos({ onClick, onGetVideoData, onSearchInput }) {
   return (
     <div className="flex-column">
       {mode === 'Videos' && (
-        <div className=" h-[48px] w-[96%] mx-auto xs:mx-auto rounded-lg border border-[#dfe1e5] xs:w-[80%] xs:rounded-3xl lg:w-[600px] my-8 hover:shadow-[0px_1px_6px_rgba(32,33,36,.28)] hover:border-[rgba(223,225,229,0)]">
+        <div className=" h-[48px] w-[96%] mx-auto xs:mx-auto rounded-lg border border-black xs:w-[80%] xs:rounded-3xl lg:w-[600px] my-8 hover:shadow-[0px_1px_6px_rgba(32,33,36,.28)] hover:border-[rgba(223,225,229,0)]">
           <form
             className="flex w-full h-full xs:pr-2 items-center "
             onSubmit={submitHandler}
@@ -188,7 +188,7 @@ function Videos({ onClick, onGetVideoData, onSearchInput }) {
             </IconButton>
             <label htmlFor="search" />
             <input
-              className="outline-none w-[60%] 2xs:w-[75%] sm:w-[80%]"
+              className="outline-none bg-transparent focus:bg-transparent w-[60%] 2xs:w-[75%] sm:w-[80%]"
               placeholder="Search"
               id="search"
               onChange={(e) => {

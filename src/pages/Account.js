@@ -61,7 +61,6 @@ function AccountPage() {
         >
           <IconButton
             aria-label="close"
-            // disableRipple="true"
             sx={{ position: 'absolute', right: '0' }}
             onClick={closeModalHandler}
           >
@@ -253,7 +252,7 @@ function AccountPage() {
           } mx-2 md:ml-[72px] xl:ml-[240px]`}
         >
           {!searchInput && <SearchLabel />}
-          <div className=" h-[48px] w-[100%] rounded-lg border border-[#dfe1e5] xs:w-[80%] xs:rounded-3xl lg:w-[600px] my-4 sm:my-6 mx-auto hover:shadow-[0px_1px_6px_rgba(32,33,36,.28)] hover:border-[rgba(223,225,229,0)] ">
+          <div className=" h-[48px] w-[100%] rounded-lg border border-black xs:w-[80%] xs:rounded-3xl lg:w-[600px] my-4 sm:my-6 mx-auto hover:shadow-[0px_1px_6px_rgba(32,33,36,.28)] hover:border-[rgba(223,225,229,0)] ">
             <form
               className="flex w-full h-full pr-2 items-center "
               onSubmit={searchSubmitHandler}
@@ -263,7 +262,7 @@ function AccountPage() {
               </IconButton>
               <label htmlFor="search" />
               <input
-                className="outline-none w-[60%] 2xs:w-[75%] sm:w-[80%]"
+                className="outline-none bg-transparent focus:bg-transparent w-[60%] 2xs:w-[75%] sm:w-[80%]"
                 placeholder="Search"
                 id="search"
                 ref={searchInputRef}

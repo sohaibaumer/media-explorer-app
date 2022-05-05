@@ -275,7 +275,7 @@ function CuratedPhotos({ onSearchInput, onClick, onGetImageData }) {
   return (
     <div className="flex-column">
       {mode === 'Images' && (
-        <div className=" h-[48px] w-[98%] rounded-lg border border-[#dfe1e5] xs:w-[80%] xs:rounded-3xl lg:w-[600px] my-8 mx-auto hover:shadow-[0px_1px_6px_rgba(32,33,36,.28)] hover:border-[rgba(223,225,229,0)]">
+        <div className=" h-[48px] w-[98%] rounded-lg border border-black xs:w-[80%] xs:rounded-3xl lg:w-[600px] my-8 mx-auto hover:shadow-[0px_1px_6px_rgba(32,33,36,.28)] hover:border-[rgba(223,225,229,0)]">
           <form
             className="flex w-full h-full mx-auto items-center "
             onSubmit={submitHandler}
@@ -285,7 +285,7 @@ function CuratedPhotos({ onSearchInput, onClick, onGetImageData }) {
             </IconButton>
             <label htmlFor="search" />
             <input
-              className="outline-none w-[60%] 2xs:w-[75%] sm:w-[80%]"
+              className="outline-none w-[60%] 2xs:w-[75%] sm:w-[80%] bg-transparent focus:bg-transparent"
               placeholder="Search"
               id="search"
               onChange={(e) => {

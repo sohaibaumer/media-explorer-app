@@ -15,6 +15,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  background: linear-gradient(
+    90deg,
+    #ffd9e8 4%,
+    #ffd9e8 86%,
+    #de95ba calc(86% + 1px),
+    #de95ba 94%,
+    #7f4a88 calc(94% + 1px),
+    #7f4a88 98%,
+    #4a266a calc(98% + 1px),
+    #4a266a 100%
+  );
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

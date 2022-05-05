@@ -109,7 +109,7 @@ function SignupForm(props) {
             <Form className="px-0 2xs:px-4">
               {values.step === 1 && (
                 <>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="fullName" className="text-[10px]">
                         Full Name{' '}
@@ -124,10 +124,10 @@ function SignupForm(props) {
                       id="fullName"
                       type="text"
                       name="fullName"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="email" className="text-[10px]">
                         Email
@@ -142,10 +142,10 @@ function SignupForm(props) {
                       id="email"
                       type="email"
                       name="email"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="password" className="text-[10px]">
                         Password
@@ -160,10 +160,10 @@ function SignupForm(props) {
                       id="password"
                       type="password"
                       name="password"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-2/5 flex justify-between">
                       <label htmlFor="confirmPassword" className="text-[10px]">
                         Confirm Password
@@ -199,7 +199,7 @@ function SignupForm(props) {
 
               {values.step === 2 && (
                 <>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="profession" className="text-[10px]">
                         Profession{' '}
@@ -217,7 +217,7 @@ function SignupForm(props) {
                       className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="aboutMe" className="text-[10px]">
                         About Me
@@ -232,10 +232,10 @@ function SignupForm(props) {
                       id="aboutMe"
                       type="text"
                       name="aboutMe"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="age" className="text-[10px]">
                         Age
@@ -250,7 +250,7 @@ function SignupForm(props) {
                       id="age"
                       type="number"
                       name="age"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                       step="1"
                       onKeyDown={(e) =>
                         ['e', 'E', '+', '-', '.'].includes(e.key) &&
@@ -258,7 +258,7 @@ function SignupForm(props) {
                       }
                     />
                   </div>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="gender" className="text-[10px]">
                         Gender{' '}
@@ -273,10 +273,10 @@ function SignupForm(props) {
                       id="gender"
                       type="text"
                       name="gender"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="location" className="text-[10px]">
                         Location{' '}
@@ -291,7 +291,7 @@ function SignupForm(props) {
                       id="location"
                       type="text"
                       name="location"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
                   {!loading && !file && (
@@ -300,7 +300,7 @@ function SignupForm(props) {
                       name="file"
                       types={fileTypes}
                       children={
-                        <div className="w-full border h-20 rounded-md mb-2 relative">
+                        <div className="w-full border border-black h-20 rounded-md mb-2 relative">
                           <div className="w-full h-1/6 flex justify-between absolute">
                             <label
                               htmlFor="imageUpload"
@@ -400,7 +400,7 @@ function SignupForm(props) {
 
               {values.step === 3 && (
                 <>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="phoneNumber" className="text-[10px]">
                         Phone Number{' '}
@@ -415,14 +415,14 @@ function SignupForm(props) {
                       id="phoneNumber"
                       type="number"
                       name="phoneNumber"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                       onKeyDown={(e) =>
                         ['e', 'E', '+', '-', '.'].includes(e.key) &&
                         e.preventDefault()
                       }
                     />
                   </div>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="facebook" className="text-[10px]">
                         Facebook
@@ -437,10 +437,10 @@ function SignupForm(props) {
                       id="facebook"
                       type="url"
                       name="facebook"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full  border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="instagram" className="text-[10px]">
                         Instagram
@@ -455,10 +455,10 @@ function SignupForm(props) {
                       id="instagram"
                       type="url"
                       name="instagram"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border h-10 rounded-md mb-2">
+                  <div className="px-2 w-full  border border-black h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="twitter" className="text-[10px]">
                         Twitter
@@ -473,7 +473,7 @@ function SignupForm(props) {
                       id="twitter"
                       type="url"
                       name="twitter"
-                      className="w-full h-[65%] outline-none focus:bg-transparent"
+                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
                   <div className="flex">

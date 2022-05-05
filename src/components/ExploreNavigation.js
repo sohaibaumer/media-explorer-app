@@ -20,7 +20,7 @@ function ExploreNavigation(props) {
   }
   return (
     <>
-      <nav className="w-screen px-0 h-[64px] text-[#262626] border-t flex items-center justify-center xs:justify-between  md:items-start md:w-[72px] md:h-screen md:py-8 md:px-2 md:border-t-0 md:border-r md:flex-col md:justify-between xl:w-[240px]">
+      <nav className="w-screen bg-[#ffd9e8] px-0 h-[64px] text-[#262626] border-t border-[#262626] flex items-center justify-center xs:justify-between  md:items-start md:w-[72px] md:h-screen md:py-8 md:px-2 md:border-t-0 md:border-r md:flex-col md:justify-between xl:w-[240px]">
         <div className="m-0 md:mx-auto px-0 xl:m-0 xl:px-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ function ExploreNavigation(props) {
           <li>
             <NavLink
               to="?mode=Images"
-              className="flex items-center  py-4 px-2 2xs:px-4 md:py-6 rounded-[80px] group hover:transition-transform_duration-300 hover:bg-slate-50  "
+              className="flex items-center outline-none py-4 px-2 2xs:px-4 md:py-6 rounded-[80px] group hover:transition-transform_duration-300 hover:font-bold  "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ function ExploreNavigation(props) {
           <li>
             <NavLink
               to="?mode=Videos"
-              className="flex items-center  py-4 px-2 2xs:px-4 md:py-6 rounded-[80px] group hover:transition-transform duration-300 hover:bg-slate-50 "
+              className="flex items-center outline-none py-4 px-2 2xs:px-4 md:py-6 rounded-[80px] group hover:transition-transform duration-300 hover:font-bold "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ function ExploreNavigation(props) {
           <li>
             <NavLink
               to="?mode=Search"
-              className="flex items-center  py-4 px-2 2xs:px-4 md:py-6 rounded-[80px] group hover:transition-transform duration-300 hover:bg-slate-50 "
+              className="flex items-center outline-none py-4 px-2 2xs:px-4 md:py-6 rounded-[80px] group hover:transition-transform duration-300 hover:font-bold "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,7 +126,7 @@ function ExploreNavigation(props) {
           <li>
             <NavLink
               to="?mode=Profile"
-              className="flex items-center py-4 px-2 2xs:px-4 md:py-6 rounded-[80px] group hover:transition-transform duration-300 hover:bg-slate-50 "
+              className="flex items-center outline-none py-4 px-2 2xs:px-4 md:py-6 rounded-[80px] group hover:transition-transform duration-300 hover:font-bold "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +155,7 @@ function ExploreNavigation(props) {
         </ul>
         <button
           onClick={handleMenu}
-          className="flex items-center  py-4 px-2 2xs:px-4 rounded-[80px] md:w-full group hover:transition-transform duration-300 hover:bg-slate-50"
+          className="flex items-center outline-none py-4 px-2 2xs:px-4 rounded-[80px] md:w-full group hover:transition-transform duration-300 hover:font-bold"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

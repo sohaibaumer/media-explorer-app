@@ -30,7 +30,7 @@ function LoginForm(props) {
         {(formik) => {
           return (
             <Form className="px-0 2xs:px-4">
-              <div className="px-2 w-full border h-10 rounded-md mb-2">
+              <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
                 <div className="w-full h-1/3 flex justify-between">
                   <label htmlFor="email" className="text-[10px]">
                     Email
@@ -45,10 +45,10 @@ function LoginForm(props) {
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full h-2/3 outline-none focus:bg-transparent"
+                  className="w-full h-2/3 outline-none bg-transparent focus:bg-transparent"
                 />
               </div>
-              <div className="px-2 w-full border h-10 rounded-md">
+              <div className="px-2 w-full border border-black h-10 rounded-md">
                 <div className="w-full h-1/3 flex justify-between">
                   <label htmlFor="password" className="text-[10px]">
                     Password
@@ -63,7 +63,7 @@ function LoginForm(props) {
                   type="password"
                   id="password2"
                   name="password"
-                  className="w-full h-2/3 outline-none focus:bg-transparent "
+                  className="w-full h-2/3 outline-none bg-transparent focus:bg-transparent "
                 />
               </div>
               <button
