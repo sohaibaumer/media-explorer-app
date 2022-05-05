@@ -1,3 +1,17 @@
+# Project Title
+
+Media Explorer, an app that renders images and videos fetched from an API. It also lets you search for images/videos of your choice and download them. You have to create a profile (signup) first to use it.
+
+- Built with React and MUI.
+- Styling with Tailwind CSS.
+- Images and videos fetched from Pexels API with Axios.
+- Forms and their validation is handled with Formik and Yup.
+- Image upload with React-drag-drop-files.
+
+## Screenshots
+
+![App Screeshots](screenshots/media-explorer-app.gif)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
