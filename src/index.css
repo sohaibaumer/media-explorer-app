@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @font-face {
   font-family: 'Billabong';
   src: local('Billabong'), url('./fonts/Billabong.ttf') format('truetype');
@@ -9,23 +10,46 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  background: linear-gradient(
-    90deg,
-    #ffd9e8 4%,
-    #ffd9e8 86%,
-    #de95ba calc(86% + 1px),
-    #de95ba 94%,
-    #7f4a88 calc(94% + 1px),
-    #7f4a88 98%,
-    #4a266a calc(98% + 1px),
-    #4a266a 100%
-  );
+  background: fixed
+      linear-gradient(
+        134deg,
+        rgba(5, 97, 98, 0.5) 0%,
+        rgba(5, 97, 98, 0.5) 14.286%,
+        rgba(7, 115, 117, 0.5) 14.286%,
+        rgba(7, 115, 117, 0.5) 28.572%,
+        rgba(10, 133, 136, 0.5) 28.572%,
+        rgba(10, 133, 136, 0.5) 42.858%,
+        rgba(13, 151, 155, 0.5) 42.858%,
+        rgba(13, 151, 155, 0.5) 57.144%,
+        rgba(16, 169, 174, 0.5) 57.144%,
+        rgba(16, 169, 174, 0.5) 71.43%,
+        rgba(19, 187, 193, 0.5) 71.43%,
+        rgba(19, 187, 193, 0.5) 85.716%,
+        rgba(22, 205, 212, 0.5) 85.716%,
+        rgba(22, 205, 212, 0.5) 100.002%
+      ),
+    linear-gradient(
+        122deg,
+        rgb(105, 71, 80) 0%,
+        rgb(105, 71, 80) 14.286%,
+        rgb(110, 89, 98) 14.286%,
+        #b2a5a4 28.572%,
+        rgb(116, 107, 116) 28.572%,
+        rgb(116, 107, 116) 42.858%,
+        rgb(122, 125, 134) 42.858%,
+        rgb(122, 125, 134) 57.144%,
+        rgb(128, 143, 153) 57.144%,
+        rgb(128, 143, 153) 71.43%,
+        rgb(134, 161, 173) 71.43%,
+        rgb(134, 161, 173) 85.716%,
+        rgb(140, 179, 192) 85.716%,
+        rgb(140, 179, 192) 100.002%
+      )
+      fixed;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -39,4 +63,38 @@ code {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Target the autofill text color for specific input fields */
+input.autofill:-webkit-autofill,
+input.autofill:-webkit-autofill:hover {
+  color: white !important;
+}
+
+
+/* Reset the text color for selected text */
+input::selection {
+  color: black !important;
+  background-color: white !important;
+}
+
+/* Change the text color of the selected item from the autocomplete dropdown */
+input:-webkit-autofill::first-line {
+  color: white !important;
+}
+input:-webkit-autofill::first-line:hover {
+  color: white !important;
+}
+
+/* Override user agent styles for autofill-selected input */
+input:-internal-autofill-selected {
+  appearance: initial !important;
+  background-image: none !important;
+  background-color: initial !important;
+  color: white !important;
+}
+
+/* Override hover styles for the autofill-selected input */
+input:-internal-autofill-selected:hover {
+  color: white !important;
 }

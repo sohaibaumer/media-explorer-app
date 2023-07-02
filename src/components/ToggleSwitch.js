@@ -44,9 +44,10 @@ function ToggleSwitch(props) {
       />
       <span
         style={{
-          fontSize: '11px',
+          fontSize: '9px',
+          fontWeight: 'bold',
           position: 'absolute',
-          top: '4px',
+          top: '6px',
           left: `${checked ? '1px' : ''}`,
           right: `${!checked ? '1px' : ''}`,
         }}

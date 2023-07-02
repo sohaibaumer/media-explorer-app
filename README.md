@@ -10,7 +10,7 @@ Media Explorer, an app that renders images and videos fetched from an API. It al
 
 ## Screenshots
 
-![App Screeshots](screenshots/media-explorer-app.gif)
+![App Screeshots](https://github.com/sohaibaumer/media-explorer-app/assets/120295412/3f7936eb-8d1d-4c52-bf2a-d4711c5c6824)
 
 # Getting Started with Create React App
 

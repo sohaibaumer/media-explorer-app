@@ -109,7 +109,7 @@ function SignupForm(props) {
             <Form className="px-0 2xs:px-4">
               {values.step === 1 && (
                 <>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="fullName" className="text-[10px]">
                         Full Name{' '}
@@ -117,17 +117,17 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="fullName"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="fullName"
                       type="text"
                       name="fullName"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="email" className="text-[10px]">
                         Email
@@ -135,17 +135,17 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="email"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="email"
                       type="email"
                       name="email"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="password" className="text-[10px]">
                         Password
@@ -153,17 +153,17 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="password"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="password"
                       type="password"
                       name="password"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-2/5 flex justify-between">
                       <label htmlFor="confirmPassword" className="text-[10px]">
                         Confirm Password
@@ -171,18 +171,18 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="confirmPassword"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="confirmPassword"
                       type="password"
                       name="confirmPassword"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
                   <button
-                    className="w-full my-8 border h-8 font-semibold text-sm rounded-lg bg-zinc-800 text-white disabled:bg-zinc-200 disabled:text-black"
+                    className="w-full my-8 border h-8 font-semibold text-sm rounded-lg  bg-white text-black border-black disabled:bg-white/20 disabled:text-white disabled:border-white"
                     type="button"
                     onClick={() => setFieldValue('step', step + 1)}
                     disabled={
@@ -199,7 +199,7 @@ function SignupForm(props) {
 
               {values.step === 2 && (
                 <>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="profession" className="text-[10px]">
                         Profession{' '}
@@ -207,17 +207,17 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="profession"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="profession"
                       type="text"
                       name="profession"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="aboutMe" className="text-[10px]">
                         About Me
@@ -225,17 +225,17 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="aboutMe"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="aboutMe"
                       type="text"
                       name="aboutMe"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="age" className="text-[10px]">
                         Age
@@ -243,14 +243,14 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="age"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="age"
                       type="number"
                       name="age"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                       step="1"
                       onKeyDown={(e) =>
                         ['e', 'E', '+', '-', '.'].includes(e.key) &&
@@ -258,7 +258,7 @@ function SignupForm(props) {
                       }
                     />
                   </div>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="gender" className="text-[10px]">
                         Gender{' '}
@@ -266,17 +266,17 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="gender"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="gender"
                       type="text"
                       name="gender"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="location" className="text-[10px]">
                         Location{' '}
@@ -284,14 +284,14 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="location"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="location"
                       type="text"
                       name="location"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
                   {!loading && !file && (
@@ -300,7 +300,7 @@ function SignupForm(props) {
                       name="file"
                       types={fileTypes}
                       children={
-                        <div className="w-full border border-black h-20 rounded-md mb-2 relative">
+                        <div className="w-full border border-white h-20 rounded-md mb-2 relative">
                           <div className="w-full h-1/6 flex justify-between absolute">
                             <label
                               htmlFor="imageUpload"
@@ -314,7 +314,7 @@ function SignupForm(props) {
                               values.aboutMe &&
                               values.profession &&
                               !file && (
-                                <span className="mr-2 text-[10px] text-red-700">
+                                <span className="mr-2 text-[10px] text-red-300">
                                   Required
                                 </span>
                               )}
@@ -373,14 +373,14 @@ function SignupForm(props) {
                   )}
                   <div className="flex">
                     <button
-                      className="w-full my-8 mr-1 border h-8 font-semibold text-sm rounded-lg bg-zinc-800 text-white disabled:bg-zinc-200 disabled:text-black"
+                      className="w-full my-8 mr-1 border h-8 font-semibold text-sm rounded-lg  bg-white text-black border-black disabled:bg-white/20 disabled:text-white disabled:border-white"
                       type="button"
                       onClick={() => setFieldValue('step', step - 1)}
                     >
                       Back
                     </button>
                     <button
-                      className="w-full my-8 ml-1 border h-8 font-semibold text-sm rounded-lg bg-zinc-800 text-white disabled:bg-zinc-200 disabled:text-black "
+                      className="w-full my-8 ml-1 border h-8 font-semibold text-sm rounded-lg bg-white text-black border-black disabled:bg-white/20 disabled:text-white disabled:border-white"
                       type="button"
                       onClick={() => setFieldValue('step', step + 1)}
                       disabled={
@@ -400,7 +400,7 @@ function SignupForm(props) {
 
               {values.step === 3 && (
                 <>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="phoneNumber" className="text-[10px]">
                         Phone Number{' '}
@@ -408,21 +408,21 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="phoneNumber"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="phoneNumber"
                       type="number"
                       name="phoneNumber"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                       onKeyDown={(e) =>
                         ['e', 'E', '+', '-', '.'].includes(e.key) &&
                         e.preventDefault()
                       }
                     />
                   </div>
-                  <div className="px-2 w-full border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="facebook" className="text-[10px]">
                         Facebook
@@ -430,17 +430,17 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="facebook"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="facebook"
                       type="url"
                       name="facebook"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full  border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full  border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="instagram" className="text-[10px]">
                         Instagram
@@ -448,17 +448,17 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="instagram"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="instagram"
                       type="url"
                       name="instagram"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
-                  <div className="px-2 w-full  border border-black h-10 rounded-md mb-2">
+                  <div className="px-2 w-full  border border-white h-10 rounded-md mb-2">
                     <div className="w-full h-[35%] flex justify-between">
                       <label htmlFor="twitter" className="text-[10px]">
                         Twitter
@@ -466,19 +466,19 @@ function SignupForm(props) {
                       <ErrorMessage
                         name="twitter"
                         component="span"
-                        className="text-[10px] text-red-700"
+                        className="text-[10px] text-red-300"
                       />
                     </div>
                     <Field
                       id="twitter"
                       type="url"
                       name="twitter"
-                      className="w-full h-[65%] outline-none bg-transparent focus:bg-transparent"
+                      className="w-full h-[65%] text-sm outline-none bg-transparent focus:bg-transparent"
                     />
                   </div>
                   <div className="flex">
                     <button
-                      className="w-full mr-1 my-8 border h-8 font-semibold text-sm rounded-lg bg-zinc-800 text-white disabled:bg-zinc-200 disabled:text-black"
+                      className="w-full mr-1 my-8 border h-8 font-semibold text-sm rounded-lg bg-white text-black border-black disabled:bg-white/20 disabled:text-white disabled:border-white"
                       type="button"
                       onClick={() => setFieldValue('step', step - 1)}
                     >
@@ -487,7 +487,7 @@ function SignupForm(props) {
                     <button
                       type="submit"
                       disabled={!formik.isValid}
-                      className="w-full ml-1 my-8 border h-8 font-semibold text-sm rounded-lg bg-zinc-800 text-white disabled:bg-zinc-200 disabled:text-black"
+                      className="w-full ml-1 my-8 border h-8 font-semibold text-sm rounded-lg bg-white text-black border-black disabled:bg-white/20 disabled:text-white disabled:border-white"
                     >
                       Sign up{' '}
                     </button>

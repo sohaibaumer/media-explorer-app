@@ -115,14 +115,14 @@ ul.imagesList > li > a > img {
 
 @media (min-width: 1024px) {
   ul.imagesList {
-    width: 70%;
+    width: 98%;
     height: 650vw;
   }
 }
 
 @media (min-width: 1280px) {
   ul.imagesList {
-    width: 75%;
+    width: 98%;
     height: 550vw;
   }
 }
@@ -130,5 +130,6 @@ ul.imagesList > li > a > img {
 @media (min-width: 1664px) {
   ul.imagesList {
     height: 450vw;
+    width: 98%;
   }
 }
