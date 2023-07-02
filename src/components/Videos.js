@@ -93,7 +93,7 @@ function Videos({ onClick, onGetVideoData, onSearchInput }) {
   }
 
   const videosMap = (
-    <ul className="grid grid-cols-1 gap-1 mx-2 sm:grid-cols-2 sm:gap-1.5 lg:grid-cols-3">
+    <ul className="mx-auto grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-1.5 lg:grid-cols-3">
       {videos.map((vdo) => {
         const [baseUrl, queryString] = vdo.image.split('?');
         const updatedQueryString =
@@ -102,7 +102,7 @@ function Videos({ onClick, onGetVideoData, onSearchInput }) {
         return (
           <li
             key={vdo.id}
-            className="w-[250px] h-[250px] 2xs:w-[300px] 2xs:h-[300px]"
+            className="mx-auto w-[100vw] h-[100vw] 2xs:w-[300px] 2xs:h-[300px]"
           >
             <Link
               to={mode === 'Search' ? '?mode=Search' : '?mode=Videos'}
